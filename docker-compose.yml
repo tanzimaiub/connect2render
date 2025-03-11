@@ -11,9 +11,10 @@ services:
       - MYSQL_PASSWORD=
       - MYSQL_DB=auth_system
     depends_on:
-      - db
+      - localhost
+      
 
-  db:
+  localhost:
     image: mysql:8.0
     restart: always
     environment:
